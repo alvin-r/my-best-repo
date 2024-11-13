@@ -16,5 +16,5 @@ def sorter(arr):
 
         # Place key in its correct position
         arr[j + 1] = key
-    # Improved sort again
+    # i want a better sort
     return arr
