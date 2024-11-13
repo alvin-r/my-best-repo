@@ -16,4 +16,5 @@ def sorter(arr):
         # Optimize by reducing the range since the largest element is now at the end
         n -= 1
 
+    # The array is now sorted
     return arr
