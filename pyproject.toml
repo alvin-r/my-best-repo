@@ -16,7 +16,8 @@ module-root = "."
 tests-root = "tests"
 test-framework = "pytest"
 ignore-paths = []
-formatter-cmds = ["ruff check --exit-zero --fix $file", "ruff format $file"]
+formatter-cmds = ["disabled"]
+
 
 [build-system]
 requires = ["poetry-core"]
