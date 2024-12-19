@@ -18,3 +18,35 @@ def sorter(arr):
         arr[j + 1] = key
     # i want a better sort
     return arr
+
+def some_function_1():
+    x = 1
+    for i in range(100):
+        print(i)
+    for i in range(200):
+        x += i
+    return x
+
+def some_function_2():
+    x = 2
+    for i in range(100):
+        print(i)
+    for i in range(200):
+        x += i
+    return x
+
+def some_function_3():
+    x = 3
+    for i in range(100):
+        print(i)
+    for i in range(200):
+        x += i
+    return x
+
+def some_function_4():
+    x = 4
+    for i in range(100):
+        print(i)
+    for i in range(200):
+        x += i
+    return x
