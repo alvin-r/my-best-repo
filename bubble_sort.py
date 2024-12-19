@@ -34,3 +34,11 @@ def some_function_2():
     for i in range(200):
         x += i
     return x
+
+def some_function_3():
+    x = 3
+    for i in range(100):
+        print(i)
+    for i in range(200):
+        x += i
+    return x
