@@ -13,16 +13,8 @@ class DataAnalyzer:
         """
         Internal method to validate and preprocess data
         """
-
-        temp_data = copy.deepcopy(data)
-        validated_data = []
-
-        for value in temp_data:
-            str_value = str(value)
-            num_value = int(str_value)
-            validated_data.append(num_value)
-
-        return validated_data
+        # Instead of deep copying, we work directly and use list comprehensions for efficiency
+        return [int(str(value)) for value in data]
 
     def process_large_dataset(self, data):
         """
@@ -30,23 +22,9 @@ class DataAnalyzer:
         """
         # First use our internal validation method
         validated_data = self._validate_and_preprocess_data(data)
-        self.temporary_storage = copy.deepcopy(validated_data)
-        working_data = copy.deepcopy(self.temporary_storage)
-        sorted_data = sort_list(working_data)
-        intermediate_results = []
-        for value in sorted_data:
-            temp_list = [value]
-            intermediate_results.extend(temp_list)
 
-        self.processed_data = []
-        for value in intermediate_results:
-            transformed = transform_number(value)
-
-            temp_str = str(transformed)
-            temp_num = float(temp_str)
-            final_value = int(temp_num)
-
-            self.processed_data.append(final_value)
+        # Combine sorting and transformation for efficiency
+        self.processed_data = [transform_number(value) for value in sorted(validated_data)]
 
         return self.processed_data
 
