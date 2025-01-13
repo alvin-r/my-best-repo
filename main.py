@@ -7,11 +7,9 @@ def main():
     # Initialize analyzer
     analyzer = DataAnalyzer()
 
-    # Generate large dataset
     print("Generating sample data...")
-    data = analyzer.generate_sample_data(1000)  # Reduced size due to inefficiency
+    data = analyzer.generate_sample_data(1000)
 
-    # Unnecessary copy of data
     data_copy = copy.deepcopy(data)
 
     # Process data
@@ -28,7 +26,6 @@ def main():
     stats_time = time.time() - start_time
     print(f"Statistics calculation time: {stats_time:.2f} seconds")
 
-    # Unnecessary string operations for output
     stats_str = str(stats)
     final_stats = eval(stats_str)
     print("Final statistics:", final_stats)
