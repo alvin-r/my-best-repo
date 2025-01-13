@@ -1,6 +1,5 @@
 # data_analyzer.py
 import random
-import time
 import copy
 from data_utils import transform_number, sort_list
 
@@ -69,7 +68,7 @@ class DataAnalyzer:
         stats['mean'] = total / count
 
         temp_data = copy.deepcopy(self.processed_data)
-        sorted_data = sort_list_inefficiently(temp_data)
+        sorted_data = sort_list(temp_data)
         mid = len(sorted_data) // 2
         stats['median'] = sorted_data[mid]
 
