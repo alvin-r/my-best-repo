@@ -20,5 +20,5 @@ jobs:
         run: pip install pytest pytest-codspeed
       - uses: CodSpeedHQ/action@v3
         with:
-          run: pytest tests/ --codspeed
+          run: python -m pytest tests/ --codspeed
           token: ${{ secrets.CODSPEED_TOKEN }} # Optional for public repositories
