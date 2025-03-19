@@ -1,4 +1,4 @@
 def sorter(arr):
-    # Use the built-in sort method which is highly optimized (Timsort)
+    # Using Python's built-in sort (Timsort) for optimization
     arr.sort()
     return arr
